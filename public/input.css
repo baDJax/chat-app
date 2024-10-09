@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.message {
+  @apply flex;
+}
+
+.message > div {
+  @apply bg-white my-2 shadow-2xl px-3 py-2;
+}
+
+.my-message {
+  @apply text-green-500 justify-end;
+}
+
+.other-message {
+  @apply justify-start;
+}
+
+.name {
+  @apply text-sm capitalize;
+}
+
+.update {
+  @apply bg-blue-100 my-2 text-blue-500 font-bold py-2 px-4 italic w-fit mx-auto;
+}
