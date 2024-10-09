@@ -4,9 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
   </head>
   <body>
-    <script src="script.js"></script>
+    <!-- <h1 class="text-blue-700">Chat App</h1> -->
+    <div class="app">
+      <!-- <div
+        class="screen join-screen grid place-items-center h-screen w-screen active"
+      >
+        <div
+          class="rounded-md bg-slate-500/20 p-12 max-w-[850px] w-full flex flex-col gap-5"
+        >
+          <h2 class="text-5xl underline underline-offset-8 text-gray-700">
+            Join Chat
+          </h2>
+          <label for="username" class="text-2xl text-gray-700 translate-y-1"
+            >Username</label
+          >
+          <input
+            type="text"
+            id="username"
+            class="w-full p-4 text-lg border-2 border-gray-400 rounded-md focus:outline-none focus:border-blue-600"
+            placeholder="Enter your username"
+            required
+          />
+          <button
+            id="join-btn"
+            class="rounded-md bg-gray-700 transition text-white text-2xl p-4 hover:bg-gray-900"
+          >
+            Join
+          </button>
+        </div>
+      </div> -->
+      <div class="h-screen screen chat-screen flex flex-col">
+        <header
+          class="flex justify-between items-center p-4 bg-gray-900 text-white"
+        >
+          <h2 class="text-2xl">Chat Room</h2>
+          <button
+            id="exit-btn"
+            class="rounded-md bg-gray-700 transition border-white/20 border text-white text-2xl p-2 px-8 hover:bg-gray-900"
+          >
+            Exit
+          </button>
+        </header>
+        <div
+          class="messages flex-grow bg-slate-100 px-4 flex flex-col overflow-hidden"
+        >
+          <div class="message my-message">
+            <div class="">
+              <div class="name">mukul</div>
+              <div class="text">hi this is a real time chat app</div>
+            </div>
+          </div>
+          <div class="update">ABC is added</div>
+          <div class="message other-message">
+            <div class="">
+              <div class="name">mukul</div>
+              <div class="text">hi this is a real time chat app</div>
+            </div>
+          </div>
+        </div>
+        <div class="message-box flex">
+          <input
+            class="message-input text-gray-700 w-full rounded-tl-md bg-slate-100 transition border-gray-600 border-2 text-2xl p-2 px-8"
+            type="text"
+          />
+          <button
+            class="send-btn rounded-tr-md max-w-[300px] w-full bg-gray-700 transition border-gray-700 border-2 text-white text-2xl p-2 px-8 hover:bg-gray-900"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
