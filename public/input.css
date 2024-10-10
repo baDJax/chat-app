@@ -2,12 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+.screen {
+  @apply h-screen w-screen;
+}
+
+.inactive {
+  @apply !hidden;
+}
+
+.join-screen {
+  @apply grid place-items-center;
+}
+
+.join-card {
+  @apply rounded-md bg-slate-500/20 p-12 max-w-[850px] w-full flex flex-col gap-5;
+}
+
+.chat-screen {
+  @apply max-w-[800px] mx-auto rounded-md overflow-hidden flex flex-col;
+}
+
+header {
+  @apply flex justify-between items-center p-4 bg-gray-900 text-white;
+}
+
+h2 {
+  @apply text-5xl underline underline-offset-8 text-gray-700;
+}
+
+h4 {
+  @apply text-3xl;
+}
+
+label {
+  @apply text-2xl text-gray-700;
+}
+
+#username {
+  @apply w-full p-4 text-lg border-2 border-gray-400 rounded-md focus:outline-none focus:border-blue-600;
+}
+
+.messages {
+  @apply overflow-auto flex-grow bg-slate-100 px-4 flex flex-col break-words;
+}
+
 .message {
   @apply flex;
 }
 
 .message > div {
   @apply bg-white my-2 shadow-2xl px-3 py-2;
+}
+
+.message-input {
+  @apply text-gray-700 w-full rounded-l-md bg-white transition border-gray-600 border-2 text-2xl p-2 px-4;
 }
 
 .my-message {
@@ -19,9 +67,17 @@
 }
 
 .name {
-  @apply text-sm capitalize;
+  @apply text-sm capitalize italic;
 }
 
 .update {
   @apply bg-blue-100 my-2 text-blue-500 font-bold py-2 px-4 italic w-fit mx-auto;
+}
+
+.btn {
+  @apply rounded-md bg-gray-700 transition border-white/20 border-2 text-white text-2xl p-2 px-8 hover:bg-gray-900;
+}
+
+.send-btn {
+  @apply rounded-l-none max-w-[300px] w-full border-gray-700;
 }
